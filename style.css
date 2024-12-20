@@ -775,8 +775,8 @@
 }
 
 .start-healing-journey .image .centered-image img {
-    width: 160px;
-    height: 160px;
+    width: 160px !important;
+    height: 160px !important;
     mix-blend-mode: multiply;
 }
 
