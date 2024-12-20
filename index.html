@@ -3,363 +3,373 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ListRace</title>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <!-- <link rel="stylesheet" href="responsive.css" /> -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+    <title>Orlando Acupuncture</title>
+    <link rel="stylesheet" href="style.css" />
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        background: #fff8f2;
-      }
-
-      /*===============================
-        Announcment Bar
-=================================*/
-
-      .announcment-bar {
-        padding: 12px 10px;
-        background: #000;
-        width: 100%;
-      }
-
-      .announcment-bar p {
-        width: 100%;
-        text-align: center;
-        color: var(--White, #fff);
-        text-align: center;
-        font-family: Assistant;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 24px; /* 133.333% */
-      }
-
-      /*=====================
-        Navbar
-======================*/
-
-      .navbar {
-        display: flex;
-        padding: 12px 60px;
-        justify-content: space-between;
-        align-items: center;
-        align-self: stretch;
-      }
-
-      .navbar .header-logo {
-        width: 100px;
-        height: 100px;
-      }
-
-      .navbar .header-logo img {
-        width: 100%;
-        height: 100%;
-      }
-
-      .navbar .navigation {
-        display: flex;
-        align-items: center;
-        gap: 60px;
-      }
-
-      .navbar .navigation .navigation-menu {
-        display: flex;
-        align-items: center;
-        gap: 32px;
-      }
-
-      .navbar .navigation .nav-menu-item {
-        color: var(--Black, #000);
-        text-align: center;
-        font-family: Assistant;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 133.333% */
-        text-decoration: none;
-      }
-
-      .navbar .navigation .nav-menu-item div {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .navbar .navigation .nav-menu-item span svg {
-        width: 18px;
-        height: 18px;
-        vertical-align: middle;
-      }
-
-      .navbar .navigation .nav-menu-icon {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .navbar .navigation .nav-menu-icon svg {
-        width: 20px;
-        height: 22px;
-        flex-shrink: 0;
-      }
-
-      .navbar .navigation .nav-menu-icon svg:last-child {
-        width: 24px;
-        height: 24px;
-        flex-shrink: 0;
-      }
-
-      /*============================
-        Hero Section
-=============================*/
-
-      .hero-section {
-        width: 100%;
-        height: 560px;
-        flex-shrink: 0;
-        background-image: url(https://i.postimg.cc/BvW6Ws1W/image-18.png);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        align-items: center;
-        padding-left: 60px;
-      }
-
-      .hero-section .hero-container {
-        display: inline-flex;
-        padding: 40px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        border-radius: 12px;
-        background: #fff8f2;
-        box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.08);
-      }
-
-      .hero-section .hero-container .review {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .hero-section .hero-container .review .star {
-        display: flex;
-        align-items: center;
-        gap: 2px;
-      }
-
-      .hero-section .hero-container .review .star svg {
-        width: 20px;
-        height: 20px;
-      }
-
-      .hero-section .hero-container .review p {
-        color: var(--Black, #000);
-        font-family: Assistant;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 22px; /* 137.5% */
-      }
-
-      .hero-section .hero-container h2 {
-        color: var(--Black, #000);
-        font-family: "Crimson Text";
-        font-size: 44px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 50px; /* 113.636% */
-      }
-
-      .hero-section .hero-container .main-content {
-        color: var(--Black, #000);
-        font-family: Assistant;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px; /* 133.333% */
-        max-width: 562px;
-        width: 100%;
-        margin-bottom: 16px;
-      }
-
-      .hero-section .hero-container .btns {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-
-      .hero-section .hero-container .btns .best-btn {
-        width: 215px;
-        padding: 10px 32px 12px 32px;
-        border-radius: 6px;
-        background: var(--Black, #000);
-
-        color: var(--White, #fff);
-        text-align: center;
-        font-family: Assistant;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 24px; /* 133.333% */
-        text-decoration: none;
-      }
-
-      .hero-section .hero-container .btns .shop-btn {
-        padding: 10px 32px 12px 32px;
-        border-radius: 6px;
-        border: 1.5px solid var(--Black, #000);
-        color: var(--Black, #000);
-        text-align: center;
-        font-family: Assistant;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 24px; /* 133.333% */
-        text-decoration: none;
-      }
-    </style>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="main_container">
-      <section class="header">
-        <div class="header-top">
-          <div class="announcment-bar">
-            <p>Free Shipping on Orders of $75!</p>
-          </div>
-
-          <div class="navbar">
-            <div class="header-logo">
-              <img src="https://i.postimg.cc/qRXPY7Jb/image-250.png" alt="" />
+    <section class="hero-section">
+      <div class="container">
+        <div class="section-content">
+          <div class="review">
+            <div class="ratting">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="15"
+                viewBox="0 0 16 15"
+                fill="none"
+              >
+                <path
+                  d="M7.28261 0.453588C7.57606 -0.141009 8.42394 -0.141008 8.71739 0.453589L10.4589 3.98227C10.5754 4.21839 10.8007 4.38204 11.0612 4.4199L14.9554 4.98575C15.6116 5.0811 15.8736 5.88748 15.3988 6.35031L12.5809 9.097C12.3924 9.28079 12.3063 9.54559 12.3509 9.80511L13.016 13.6835C13.1281 14.337 12.4422 14.8354 11.8553 14.5268L8.37227 12.6957C8.13921 12.5732 7.86079 12.5732 7.62773 12.6957L4.14471 14.5268C3.55781 14.8354 2.87186 14.337 2.98395 13.6835L3.64915 9.80511C3.69366 9.54559 3.60762 9.28079 3.41907 9.097L0.601251 6.35031C0.126437 5.88748 0.388446 5.0811 1.04462 4.98575L4.93875 4.4199C5.19932 4.38204 5.42457 4.21838 5.5411 3.98227L7.28261 0.453588Z"
+                  fill="#FBD40D"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="15"
+                viewBox="0 0 16 15"
+                fill="none"
+              >
+                <path
+                  d="M7.28261 0.453588C7.57606 -0.141009 8.42394 -0.141008 8.71739 0.453589L10.4589 3.98227C10.5754 4.21839 10.8007 4.38204 11.0612 4.4199L14.9554 4.98575C15.6116 5.0811 15.8736 5.88748 15.3988 6.35031L12.5809 9.097C12.3924 9.28079 12.3063 9.54559 12.3509 9.80511L13.016 13.6835C13.1281 14.337 12.4422 14.8354 11.8553 14.5268L8.37227 12.6957C8.13921 12.5732 7.86079 12.5732 7.62773 12.6957L4.14471 14.5268C3.55781 14.8354 2.87186 14.337 2.98395 13.6835L3.64915 9.80511C3.69366 9.54559 3.60762 9.28079 3.41907 9.097L0.601251 6.35031C0.126437 5.88748 0.388446 5.0811 1.04462 4.98575L4.93875 4.4199C5.19932 4.38204 5.42457 4.21838 5.5411 3.98227L7.28261 0.453588Z"
+                  fill="#FBD40D"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="15"
+                viewBox="0 0 16 15"
+                fill="none"
+              >
+                <path
+                  d="M7.28261 0.453588C7.57606 -0.141009 8.42394 -0.141008 8.71739 0.453589L10.4589 3.98227C10.5754 4.21839 10.8007 4.38204 11.0612 4.4199L14.9554 4.98575C15.6116 5.0811 15.8736 5.88748 15.3988 6.35031L12.5809 9.097C12.3924 9.28079 12.3063 9.54559 12.3509 9.80511L13.016 13.6835C13.1281 14.337 12.4422 14.8354 11.8553 14.5268L8.37227 12.6957C8.13921 12.5732 7.86079 12.5732 7.62773 12.6957L4.14471 14.5268C3.55781 14.8354 2.87186 14.337 2.98395 13.6835L3.64915 9.80511C3.69366 9.54559 3.60762 9.28079 3.41907 9.097L0.601251 6.35031C0.126437 5.88748 0.388446 5.0811 1.04462 4.98575L4.93875 4.4199C5.19932 4.38204 5.42457 4.21838 5.5411 3.98227L7.28261 0.453588Z"
+                  fill="#FBD40D"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="15"
+                viewBox="0 0 16 15"
+                fill="none"
+              >
+                <path
+                  d="M7.28261 0.453588C7.57606 -0.141009 8.42394 -0.141008 8.71739 0.453589L10.4589 3.98227C10.5754 4.21839 10.8007 4.38204 11.0612 4.4199L14.9554 4.98575C15.6116 5.0811 15.8736 5.88748 15.3988 6.35031L12.5809 9.097C12.3924 9.28079 12.3063 9.54559 12.3509 9.80511L13.016 13.6835C13.1281 14.337 12.4422 14.8354 11.8553 14.5268L8.37227 12.6957C8.13921 12.5732 7.86079 12.5732 7.62773 12.6957L4.14471 14.5268C3.55781 14.8354 2.87186 14.337 2.98395 13.6835L3.64915 9.80511C3.69366 9.54559 3.60762 9.28079 3.41907 9.097L0.601251 6.35031C0.126437 5.88748 0.388446 5.0811 1.04462 4.98575L4.93875 4.4199C5.19932 4.38204 5.42457 4.21838 5.5411 3.98227L7.28261 0.453588Z"
+                  fill="#FBD40D"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="15"
+                viewBox="0 0 16 15"
+                fill="none"
+              >
+                <path
+                  d="M7.28261 0.453588C7.57606 -0.141009 8.42394 -0.141008 8.71739 0.453589L10.4589 3.98227C10.5754 4.21839 10.8007 4.38204 11.0612 4.4199L14.9554 4.98575C15.6116 5.0811 15.8736 5.88748 15.3988 6.35031L12.5809 9.097C12.3924 9.28079 12.3063 9.54559 12.3509 9.80511L13.016 13.6835C13.1281 14.337 12.4422 14.8354 11.8553 14.5268L8.37227 12.6957C8.13921 12.5732 7.86079 12.5732 7.62773 12.6957L4.14471 14.5268C3.55781 14.8354 2.87186 14.337 2.98395 13.6835L3.64915 9.80511C3.69366 9.54559 3.60762 9.28079 3.41907 9.097L0.601251 6.35031C0.126437 5.88748 0.388446 5.0811 1.04462 4.98575L4.93875 4.4199C5.19932 4.38204 5.42457 4.21838 5.5411 3.98227L7.28261 0.453588Z"
+                  fill="#FBD40D"
+                />
+              </svg>
             </div>
-            <div class="navigation">
-              <div class="navigation-menu">
-                <a href="#" class="nav-menu-item">Best Sellers</a>
-                <a href="#" class="nav-menu-item">
-                  <div>
-                    Products<span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          d="M9.00003 12.375C8.85618 12.375 8.71218 12.32 8.60235 12.2102L2.97735 6.58519C2.75755 6.3654 2.75755 6.00947 2.97735 5.78982C3.19714 5.57016 3.55307 5.57002 3.77272 5.78982L9.00003 11.0171L14.2273 5.78982C14.4471 5.57002 14.8031 5.57002 15.0227 5.78982C15.2424 6.00961 15.2425 6.36554 15.0227 6.58519L9.39772 12.2102C9.28789 12.32 9.14389 12.375 9.00003 12.375Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                </a>
-                <a href="#" class="nav-menu-item">
-                  <div>
-                    Occassion<span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          d="M9.00003 12.375C8.85618 12.375 8.71218 12.32 8.60235 12.2102L2.97735 6.58519C2.75755 6.3654 2.75755 6.00947 2.97735 5.78982C3.19714 5.57016 3.55307 5.57002 3.77272 5.78982L9.00003 11.0171L14.2273 5.78982C14.4471 5.57002 14.8031 5.57002 15.0227 5.78982C15.2424 6.00961 15.2425 6.36554 15.0227 6.58519L9.39772 12.2102C9.28789 12.32 9.14389 12.375 9.00003 12.375Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                </a>
-                <a href="#" class="nav-menu-item">
-                  <div>
-                    Recipient<span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          d="M9.00003 12.375C8.85618 12.375 8.71218 12.32 8.60235 12.2102L2.97735 6.58519C2.75755 6.3654 2.75755 6.00947 2.97735 5.78982C3.19714 5.57016 3.55307 5.57002 3.77272 5.78982L9.00003 11.0171L14.2273 5.78982C14.4471 5.57002 14.8031 5.57002 15.0227 5.78982C15.2424 6.00961 15.2425 6.36554 15.0227 6.58519L9.39772 12.2102C9.28789 12.32 9.14389 12.375 9.00003 12.375Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                </a>
-                <a href="#" class="nav-menu-item">
-                  <div>
-                    Holiday<span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                      >
-                        <path
-                          d="M9.00003 12.375C8.85618 12.375 8.71218 12.32 8.60235 12.2102L2.97735 6.58519C2.75755 6.3654 2.75755 6.00947 2.97735 5.78982C3.19714 5.57016 3.55307 5.57002 3.77272 5.78982L9.00003 11.0171L14.2273 5.78982C14.4471 5.57002 14.8031 5.57002 15.0227 5.78982C15.2424 6.00961 15.2425 6.36554 15.0227 6.58519L9.39772 12.2102C9.28789 12.32 9.14389 12.375 9.00003 12.375Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                </a>
-                <a href="#" class="nav-menu-item">Contact</a>
+            <p class="review-text">
+              “I would highly recommend Dr. Barnett and Orlando Acupuncture for
+              treating any ailments they have. They are very professional, and
+              highly knowledgeable.”
+            </p>
+          </div>
+          <h2 class="section__title">
+            Unlock Your Body’s Natural Healing Potential
+          </h2>
+          <p class="description">
+            Advanced acupuncture and regenerative therapies designed to
+            alleviate chronic pain, boost fertility, and enhance overall health.
+          </p>
+          <a href="#" class="primary-button">
+            <span class="primary-button-text">Schedule Now</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <circle cx="12" cy="12" r="12" fill="white" />
+              <path
+                d="M7 11.25C6.58579 11.25 6.25 11.5858 6.25 12C6.25 12.4142 6.58579 12.75 7 12.75V11.25ZM17.5303 12.5303C17.8232 12.2374 17.8232 11.7626 17.5303 11.4697L12.7574 6.6967C12.4645 6.40381 11.9896 6.40381 11.6967 6.6967C11.4038 6.98959 11.4038 7.46447 11.6967 7.75736L15.9393 12L11.6967 16.2426C11.4038 16.5355 11.4038 17.0104 11.6967 17.3033C11.9896 17.5962 12.4645 17.5962 12.7574 17.3033L17.5303 12.5303ZM7 12.75H17V11.25H7V12.75Z"
+                fill="#280149"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="video-container">
+          <img
+            src="https://orlandoacupuncture.com/wp-content/uploads/2024/12/Hero-Image.png"
+            alt=""
+            class="hero-image"
+          />
+          <img
+            src="https://orlandoacupuncture.com/wp-content/uploads/2024/12/play-button.png"
+            alt=""
+            class="play-btn"
+          />
+          <img
+            src="https://orlandoacupuncture.com/wp-content/uploads/2024/12/flower-image.png"
+            alt=""
+            class="flower-image"
+          />
+        </div>
+        <a href="#" class="primary-button mobile-btn">
+          <span class="primary-button-text">Schedule Now</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <circle cx="12" cy="12" r="12" fill="white" />
+            <path
+              d="M7 11.25C6.58579 11.25 6.25 11.5858 6.25 12C6.25 12.4142 6.58579 12.75 7 12.75V11.25ZM17.5303 12.5303C17.8232 12.2374 17.8232 11.7626 17.5303 11.4697L12.7574 6.6967C12.4645 6.40381 11.9896 6.40381 11.6967 6.6967C11.4038 6.98959 11.4038 7.46447 11.6967 7.75736L15.9393 12L11.6967 16.2426C11.4038 16.5355 11.4038 17.0104 11.6967 17.3033C11.9896 17.5962 12.4645 17.5962 12.7574 17.3033L17.5303 12.5303ZM7 12.75H17V11.25H7V12.75Z"
+              fill="#280149"
+            />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="special-about">
+      <div class="container">
+        <h2 class="section__title">
+          What Is Special About Orlando Acupuncture?
+        </h2>
+        <div class="feature-wrapper">
+          <div class="feature">
+            <div class="feature-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <path
+                  d="M10.2428 30.3991C10.6866 30.3991 11.141 30.3966 11.6054 30.3966H20.3948C20.8585 30.3966 21.3129 30.3991 21.7567 30.3991C25.8236 30.3991 28.9311 30.1911 28.9311 25.9396C28.9311 21.4897 25.5279 17.8366 21.1817 17.4395C21.1471 18.9963 16.0015 22.8382 16.0015 22.8382C16.0015 22.8382 10.8546 18.9966 10.8198 17.4398C6.47415 17.8366 3.07031 21.4897 3.07031 25.9396C3.07031 30.1911 6.17655 30.3991 10.2428 30.3991ZM19.8406 24.5934C19.8406 24.4667 19.9548 24.3646 20.0969 24.3646H21.487V22.9751C21.487 22.8343 21.5884 22.7188 21.7151 22.7188H23.087C23.213 22.7188 23.3151 22.8334 23.3151 22.9751V24.3649H24.7046C24.8454 24.3649 24.9606 24.467 24.9606 24.5937V25.9649C24.9606 26.0916 24.8463 26.1937 24.7046 26.1937H23.3148V27.5831C23.3148 27.7246 23.2124 27.8391 23.086 27.8391H21.7148C21.5881 27.8391 21.486 27.7249 21.486 27.5831V26.1934H20.0966C19.9551 26.1934 19.8402 26.0913 19.8402 25.9646L19.8406 24.5934Z"
+                  fill="#026969"
+                />
+                <path
+                  d="M16.0032 18.557C19.9341 18.557 23.1203 12.6463 23.1203 8.71577C23.1203 4.78585 19.9341 1.59961 16.0032 1.59961C12.073 1.59961 8.88672 4.78585 8.88672 8.71577C8.88672 12.6463 12.073 18.557 16.0032 18.557Z"
+                  fill="#026969"
+                />
+              </svg>
+            </div>
+            <p class="feature-name">
+              Chronic Pain & Complex Condition Specialists
+            </p>
+            <p class="feature-description">
+              Experts in relieving chronic pain and treating challenging
+              conditions that other methods may not solve.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <path
+                  d="M22.334 3.99935V5.33268C22.334 6.61908 21.2871 7.66602 20.0007 7.66602H12.0007C10.7143 7.66602 9.66732 6.61908 9.66732 5.33268V3.99935C9.66732 2.71295 10.7143 1.66602 12.0007 1.66602H20.0007C21.2871 1.66602 22.334 2.71295 22.334 3.99935ZM27.6673 7.99935V26.666C27.6673 28.6881 26.0228 30.3327 24.0007 30.3327H8.00065C5.97852 30.3327 4.33398 28.6881 4.33398 26.666V7.99935C4.33398 6.09135 5.80345 4.53788 7.66732 4.36642V5.33268C7.66732 7.72202 9.61132 9.66602 12.0007 9.66602H20.0007C22.39 9.66602 24.334 7.72202 24.334 5.33268V4.36642C26.1979 4.53788 27.6673 6.09148 27.6673 7.99935ZM22.334 25.3327C22.334 24.7805 21.8861 24.3327 21.334 24.3327H10.6673C10.1152 24.3327 9.66732 24.7805 9.66732 25.3327C9.66732 25.8848 10.1152 26.3327 10.6673 26.3327H21.334C21.8861 26.3327 22.334 25.8848 22.334 25.3327ZM22.334 19.9993C22.334 19.4472 21.8861 18.9993 21.334 18.9993H10.6673C10.1152 18.9993 9.66732 19.4472 9.66732 19.9993C9.66732 20.5515 10.1152 20.9993 10.6673 20.9993H21.334C21.8861 20.9993 22.334 20.5515 22.334 19.9993ZM22.334 14.666C22.334 14.1139 21.8861 13.666 21.334 13.666H10.6673C10.1152 13.666 9.66732 14.1139 9.66732 14.666C9.66732 15.2181 10.1152 15.666 10.6673 15.666H21.334C21.8861 15.666 22.334 15.2181 22.334 14.666Z"
+                  fill="#026969"
+                />
+              </svg>
+            </div>
+            <p class="feature-name">Personalized Treatment Plans</p>
+            <p class="feature-description">
+              Tailored care with clear goals, ensuring each patient receives the
+              best-suited therapies for their unique needs.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_6345)">
+                  <path
+                    d="M1.875 31.0625C1.875 29.9567 2.17131 28.988 2.65044 28.1875H10.4746C10.9537 28.988 11.25 29.9567 11.25 31.0625V32H13.125V31.0625C13.125 27.3814 10.7181 25.2221 8.23394 23.5C10.7181 21.7779 13.125 19.6811 13.125 16C13.125 12.3189 10.7181 10.2221 8.23394 8.5C10.7181 6.77787 13.125 4.68112 13.125 1V0H11.25V1C11.25 2.10581 10.9537 3.012 10.4746 3.8125H2.65044C2.17131 3.012 1.875 2.10581 1.875 1V0H0V1C0 4.68112 2.40694 6.77787 4.89106 8.5C2.40694 10.2221 0 12.3189 0 16C0 19.6811 2.40694 21.7779 4.89106 23.5C2.40694 25.2221 0 27.3814 0 31.0625V32H1.875V31.0625ZM4.27675 5.68687H8.84819C8.17069 6.26988 7.3885 6.81519 6.56244 7.37C5.73644 6.81519 4.95425 6.26988 4.27675 5.68687ZM6.5625 9.63C7.38856 10.1848 8.17075 10.7301 8.84825 11.3125H4.27675C4.95425 10.7301 5.73644 10.1848 6.5625 9.63ZM2.65044 13.1875H10.4746C10.8096 13.7474 11.0481 14.3643 11.1606 15.0625H1.96438C2.07687 14.3643 2.31538 13.7474 2.65044 13.1875ZM1.96438 16.9369H11.1606C11.0481 17.6357 10.8096 18.2526 10.4746 18.8125H2.65044C2.31538 18.2526 2.07687 17.6357 1.96438 16.9369ZM4.27675 20.6869H8.84819C8.17069 21.2699 7.3885 21.8152 6.56244 22.37C5.73644 21.8152 4.95425 21.2699 4.27675 20.6869ZM6.5625 24.63C7.38856 25.1848 8.17075 25.7301 8.84825 26.3125H4.27675C4.95425 25.7301 5.73644 25.1848 6.5625 24.63Z"
+                    fill="#026969"
+                  />
+                  <path
+                    d="M15.9375 28.1875L19.75 30.4375V32H21.625V30.4375L25.375 28.1875V22.5625L20.6875 19.75L15.9375 22.5625V28.1875Z"
+                    fill="#026969"
+                  />
+                  <path
+                    d="M19.75 0V1.5625L15.9375 3.8125V9.4375L20.6875 12.25L25.375 9.4375V3.8125L21.625 1.5625V0H19.75Z"
+                    fill="#026969"
+                  />
+                  <path
+                    d="M21.625 13.8741V18.1262L27.1354 21.432L32 18.8127V13.1877L27.1354 10.5684L21.625 13.8741Z"
+                    fill="#026969"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_6345">
+                    <rect width="32" height="32" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <p class="feature-name">Cutting-Edge Therapies</p>
+            <p class="feature-description">
+              A blend of traditional Chinese medicine with advanced treatments
+              like O3 Regenerative Therapy and ATP BioTherapy.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_6357)">
+                  <path
+                    d="M25.1999 1.68917C24.4037 0.939877 23.3849 0.580078 22.358 0.580078C21.2021 0.580078 20.0348 1.03582 19.1644 1.90734L18.7909 2.28084L18.4174 1.9062C17.547 1.03582 16.3797 0.580078 15.2237 0.580078C14.1969 0.580078 13.178 0.939877 12.3819 1.68917C10.6309 3.3374 10.6 6.09471 12.2882 7.78292L18.7909 14.2856L25.2935 7.78292C26.9817 6.09471 26.9509 3.3374 25.1999 1.68917Z"
+                    fill="#026969"
+                  />
+                  <path
+                    d="M31.5824 17.596C30.5829 16.9187 29.4053 17.1106 28.3625 17.7125C27.3196 18.3145 21.3321 23.4339 21.3321 23.4339L15.4382 23.4351C15.1641 23.4351 14.8671 23.1267 14.8671 22.8537C14.8671 22.5327 15.147 22.2826 15.4382 22.2826H19.0442C20.3064 22.2826 21.7193 21.4602 21.7193 19.9981C21.7193 18.4447 20.3064 17.7137 19.0442 17.7137C16.8546 17.7137 16.4285 17.7228 16.4285 17.7228C15.5513 17.7228 14.6615 17.6703 13.9762 17.3036C13.0624 16.8353 12.0093 16.5703 10.8854 16.5703C8.99841 16.5703 7.30906 17.323 6.15085 18.5098L0 24.5659L6.85332 31.4192L9.13776 29.1347H20.705C21.8564 29.1347 22.9678 28.7121 23.8278 27.948L31.66 19.162C32.1386 18.7371 32.1112 17.9558 31.5824 17.596Z"
+                    fill="#026969"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_6357">
+                    <rect width="32" height="32" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <p class="feature-name">Five-Star Patient Experience</p>
+            <p class="feature-description">
+              Experts in relieving chronic pain and treating challenging
+              conditions that other methods may not solve.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="we-treat">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section__title">What We Treat</h2>
+          <p class="description">
+            Our highly trained team is dedicated to providing the best possible
+            care for our patients.
+          </p>
+          <p class="description">
+            Whether you are dealing with a chronic condition, have been
+            frustrated by conventional treatment, or are looking to improve your
+            fertility, we are here to help. We offer a variety of treatments and
+            therapies to help our patients manage their symptoms and improve
+            their overall health.
+          </p>
+        </div>
+        <div class="card-wrapper">
+          <div class="card">
+            <div class="content">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+              >
+                <g filter="url(#filter0_d_1_6511)">
+                  <circle cx="20" cy="16" r="16" fill="#34055B" />
+                  <path
+                    d="M15.2929 19.2929C14.9024 19.6834 14.9024 20.3166 15.2929 20.7071C15.6834 21.0976 16.3166 21.0976 16.7071 20.7071L15.2929 19.2929ZM25.4853 11.5147C25.4853 10.9624 25.0376 10.5147 24.4853 10.5147H15.4853C14.933 10.5147 14.4853 10.9624 14.4853 11.5147C14.4853 12.067 14.933 12.5147 15.4853 12.5147H23.4853V20.5147C23.4853 21.067 23.933 21.5147 24.4853 21.5147C25.0376 21.5147 25.4853 21.067 25.4853 20.5147V11.5147ZM16.7071 20.7071L25.1924 12.2218L23.7782 10.8076L15.2929 19.2929L16.7071 20.7071Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_1_6511"
+                    x="0"
+                    y="0"
+                    width="40"
+                    height="40"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_1_6511"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_1_6511"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+              <div class="treatment">
+                <p>Chronic Pain</p>
               </div>
-              <div class="nav-menu-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="22"
-                  viewBox="0 0 20 22"
-                  fill="none"
-                >
-                  <g clip-path="url(#clip0_1_682)">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12.2557 13.5242C11.6589 14.1461 10.9504 14.6395 10.1707 14.976C9.39092 15.3126 8.55521 15.4858 7.71123 15.4858C6.86724 15.4858 6.03153 15.3126 5.25179 14.976C4.47205 14.6395 3.76357 14.1461 3.16678 13.5242C2.57 12.9023 2.0966 12.164 1.77362 11.3514C1.45064 10.5388 1.28441 9.66794 1.28441 8.78842C1.28441 7.90891 1.45064 7.038 1.77362 6.22543C2.0966 5.41287 2.57 4.67455 3.16678 4.05263C4.37204 2.79663 6.00673 2.09101 7.71123 2.09101C9.41572 2.09101 11.0504 2.79663 12.2557 4.05263C13.4609 5.30864 14.138 7.01216 14.138 8.78842C14.138 10.5647 13.4609 12.2682 12.2557 13.5242ZM12.5446 14.8211C11.0499 16.1256 9.12809 16.7754 7.18319 16.6339C5.23828 16.4925 3.42174 15.5708 2.11542 14.0626C0.809104 12.5544 0.114752 10.5771 0.178327 8.54647C0.241902 6.51582 1.05845 4.58994 2.45633 3.17367C3.85421 1.7574 5.72454 0.961048 7.67415 0.952013C9.62377 0.942977 11.5008 1.72196 12.9107 3.12522C14.3206 4.52848 15.1536 6.44671 15.2345 8.47669C15.3154 10.5067 14.638 12.4903 13.3446 14.0105L19.3446 20.2632C19.4023 20.3155 19.4491 20.3797 19.4819 20.4518C19.5148 20.5238 19.533 20.6022 19.5354 20.6819C19.5378 20.7617 19.5243 20.8411 19.4959 20.9151C19.4674 20.9892 19.4246 21.0564 19.3701 21.1124C19.3156 21.1684 19.2506 21.212 19.1791 21.2406C19.1076 21.2692 19.0313 21.2821 18.9548 21.2784C18.8783 21.2748 18.8034 21.2547 18.7347 21.2195C18.666 21.1843 18.6051 21.1346 18.5557 21.0737L12.5446 14.8211Z"
-                      fill="black"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1_682">
-                      <rect width="20" height="22" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="22"
-                  viewBox="0 0 20 22"
-                  fill="none"
-                >
-                  <g clip-path="url(#clip0_1_685)">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M6.66678 5.21053C6.66678 4.28925 7.01796 3.4057 7.64309 2.75426C8.26821 2.10282 9.11605 1.73684 10.0001 1.73684C10.8842 1.73684 11.732 2.10282 12.3571 2.75426C12.9823 3.4057 13.3334 4.28925 13.3334 5.21053C13.3334 6.13181 12.9823 7.01535 12.3571 7.66679C11.732 8.31823 10.8842 8.68421 10.0001 8.68421C9.11605 8.68421 8.26821 8.31823 7.64309 7.66679C7.01796 7.01535 6.66678 6.13181 6.66678 5.21053ZM10.0001 0.578949C8.82137 0.578949 7.69091 1.06692 6.85741 1.93551C6.02392 2.8041 5.55566 3.98216 5.55566 5.21053C5.55566 6.4389 6.02392 7.61696 6.85741 8.48555C7.69091 9.35414 8.82137 9.84211 10.0001 9.84211C11.1788 9.84211 12.3093 9.35414 13.1428 8.48555C13.9763 7.61696 14.4446 6.4389 14.4446 5.21053C14.4446 3.98216 13.9763 2.8041 13.1428 1.93551C12.3093 1.06692 11.1788 0.578949 10.0001 0.578949ZM16.2001 14.6474C17.4446 15.5968 18.2334 17.2411 18.3223 20.2632H1.67789C1.76678 17.2526 2.55566 15.5968 3.789 14.6474C5.17789 13.6053 7.22233 13.3158 10.0001 13.3158C12.7779 13.3158 14.8334 13.6168 16.2001 14.6474ZM10.0001 12.1579C7.22233 12.1579 4.83344 12.4358 3.14455 13.7211C1.41122 15.0295 0.555664 17.2874 0.555664 20.8421V21.4211H19.4446V20.8421C19.4446 17.2874 18.589 15.0295 16.8557 13.7211C15.1668 12.4474 12.7779 12.1579 10.0001 12.1579Z"
-                      fill="black"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1_685">
-                      <rect width="20" height="22" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
+            </div>
+            <div class="hover-content">
+              <p class="treatment">Chronic Pain</p>
+              <div class="treatment-list">
+                <ul>
+                  <li>Low Back Pain & Sciatica</li>
+                  <li>Neck Pain</li>
+                  <li>Headaches & Migraines</li>
+                  <li>Arthritis</li>
+                  <li>Shoulder Pain</li>
+                  <li>Elbow Pain</li>
+                  <li>Heel Pain & Plantar Fasciitis</li>
+                  <li>Knee Pain</li>
+                  <li>Carpal Tunnel</li>
+                  <li>Fibromyalgia</li>
+                </ul>
+              </div>
+              <a href="#" class="learn-more">
+                <span>Learn More</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -367,97 +377,682 @@
                   viewBox="0 0 24 24"
                   fill="none"
                 >
+                  <circle cx="12" cy="12" r="12" fill="white" />
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M12.5003 1C11.2683 1 10.0867 1.49482 9.21548 2.37561C8.34428 3.2564 7.85485 4.45101 7.85485 5.69663V6.25034H4.76438L4.01132 17.72C3.96574 18.3961 4.05814 19.0745 4.28277 19.713C4.50741 20.3515 4.85948 20.9365 5.31714 21.4316C5.77479 21.9268 6.32825 22.3215 6.94314 22.5913C7.55803 22.8611 8.22122 23.0002 8.89152 23H16.1091C16.7786 23.0001 17.4409 22.8613 18.0551 22.5921C18.6693 22.3229 19.2222 21.929 19.6797 21.435C20.1372 20.9409 20.4895 20.3571 20.7148 19.7198C20.9401 19.0825 21.0335 18.4052 20.9893 17.7299L20.2363 6.26022H17.1458V5.69663C17.1458 5.07986 17.0257 4.46913 16.7922 3.89931C16.5587 3.32949 16.2166 2.81173 15.7852 2.37561C15.3538 1.93949 14.8417 1.59354 14.2781 1.35751C13.7145 1.12148 13.1104 1 12.5003 1ZM16.1678 6.25034V5.69663C16.1678 4.71324 15.7814 3.77013 15.0936 3.07477C14.4058 2.37941 13.473 1.98876 12.5003 1.98876C11.5277 1.98876 10.5948 2.37941 9.90702 3.07477C9.21924 3.77013 8.83284 4.71324 8.83284 5.69663V6.25034H16.1678ZM8.83284 7.2391H16.1678V7.79281C16.1678 8.7762 15.7814 9.71931 15.0936 10.4147C14.4058 11.11 13.473 11.5007 12.5003 11.5007C11.5277 11.5007 10.5948 11.11 9.90702 10.4147C9.21924 9.71931 8.83284 8.7762 8.83284 7.79281V7.2391ZM7.85485 7.2391V7.79281C7.85485 9.03843 8.34428 10.233 9.21548 11.1138C10.0867 11.9946 11.2683 12.4894 12.5003 12.4894C13.7324 12.4894 14.914 11.9946 15.7852 11.1138C16.6564 10.233 17.1458 9.03843 17.1458 7.79281V7.2391H19.317L20.0113 17.7892C20.0475 18.3298 19.9734 18.8721 19.7937 19.3825C19.614 19.893 19.3325 20.3606 18.9666 20.7565C18.6007 21.1523 18.1583 21.468 17.6667 21.6838C17.1752 21.8997 16.645 22.0111 16.1091 22.0112H8.89152C8.3548 22.0125 7.82356 21.902 7.33087 21.6868C6.83817 21.4716 6.39455 21.1561 6.02762 20.7601C5.66068 20.3641 5.37827 19.896 5.19797 19.3849C5.01766 18.8738 4.94331 18.3306 4.97954 17.7892L5.68369 7.2391H7.85485Z"
-                    fill="black"
+                    d="M7 11.25C6.58579 11.25 6.25 11.5858 6.25 12C6.25 12.4142 6.58579 12.75 7 12.75V11.25ZM17.5303 12.5303C17.8232 12.2374 17.8232 11.7626 17.5303 11.4697L12.7574 6.6967C12.4645 6.40381 11.9896 6.40381 11.6967 6.6967C11.4038 6.98959 11.4038 7.46447 11.6967 7.75736L15.9393 12L11.6967 16.2426C11.4038 16.5355 11.4038 17.0104 11.6967 17.3033C11.9896 17.5962 12.4645 17.5962 12.7574 17.3033L17.5303 12.5303ZM7 12.75H17V11.25H7V12.75Z"
+                    fill="#34055B"
                   />
                 </svg>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <circle cx="16" cy="16" r="16" fill="#880164" />
+                <path
+                  d="M11.2929 19.2929C10.9024 19.6834 10.9024 20.3166 11.2929 20.7071C11.6834 21.0976 12.3166 21.0976 12.7071 20.7071L11.2929 19.2929ZM21.4853 11.5147C21.4853 10.9624 21.0376 10.5147 20.4853 10.5147L11.4853 10.5147C10.933 10.5147 10.4853 10.9624 10.4853 11.5147C10.4853 12.067 10.933 12.5147 11.4853 12.5147L19.4853 12.5147L19.4853 20.5147C19.4853 21.067 19.933 21.5147 20.4853 21.5147C21.0376 21.5147 21.4853 21.067 21.4853 20.5147L21.4853 11.5147ZM12.7071 20.7071L21.1924 12.2218L19.7782 10.8076L11.2929 19.2929L12.7071 20.7071Z"
+                  fill="white"
+                />
+              </svg>
+              <div class="treatment">
+                <p>Reproductive Health</p>
               </div>
+            </div>
+            <div class="hover-content">
+              <p class="treatment">Reproductive Health</p>
+              <div class="treatment-list">
+                <ul>
+                  <li>PCOS</li>
+                  <li>Endometriosis</li>
+                  <li>Unexplained infertility</li>
+                  <li>IVF Support</li>
+                  <li>Low Ovarian Reserve</li>
+                  <li>Recurring Miscarriage</li>
+                  <li>Fallopian Tube & Endometrial Lining</li>
+                  <li>Sperm Motility and Mobility</li>
+                  <li>Menopause Pain During Pregnancy</li>
+                  <li>Routine Pre-Labor Acupuncture</li>
+                </ul>
+              </div>
+              <a href="#" class="learn-more">
+                <span>Learn More</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <circle cx="12" cy="12" r="12" fill="white" />
+                  <path
+                    d="M7 11.25C6.58579 11.25 6.25 11.5858 6.25 12C6.25 12.4142 6.58579 12.75 7 12.75V11.25ZM17.5303 12.5303C17.8232 12.2374 17.8232 11.7626 17.5303 11.4697L12.7574 6.6967C12.4645 6.40381 11.9896 6.40381 11.6967 6.6967C11.4038 6.98959 11.4038 7.46447 11.6967 7.75736L15.9393 12L11.6967 16.2426C11.4038 16.5355 11.4038 17.0104 11.6967 17.3033C11.9896 17.5962 12.4645 17.5962 12.7574 17.3033L17.5303 12.5303ZM7 12.75H17V11.25H7V12.75Z"
+                    fill="#34055B"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <circle cx="16" cy="16" r="16" fill="#026969" />
+                <path
+                  d="M11.2929 19.2929C10.9024 19.6834 10.9024 20.3166 11.2929 20.7071C11.6834 21.0976 12.3166 21.0976 12.7071 20.7071L11.2929 19.2929ZM21.4853 11.5147C21.4853 10.9624 21.0376 10.5147 20.4853 10.5147L11.4853 10.5147C10.933 10.5147 10.4853 10.9624 10.4853 11.5147C10.4853 12.067 10.933 12.5147 11.4853 12.5147L19.4853 12.5147L19.4853 20.5147C19.4853 21.067 19.933 21.5147 20.4853 21.5147C21.0376 21.5147 21.4853 21.067 21.4853 20.5147L21.4853 11.5147ZM12.7071 20.7071L21.1924 12.2218L19.7782 10.8076L11.2929 19.2929L12.7071 20.7071Z"
+                  fill="white"
+                />
+              </svg>
+              <div class="treatment">
+                <p>Chronic Pain</p>
+              </div>
+            </div>
+            <div class="hover-content">
+              <p class="treatment">Complex Conditions</p>
+              <div class="treatment-list">
+                <ul>
+                  <li>Lung Disease</li>
+                  <li>Chronic Kidney Disease</li>
+                  <li>Degenerative Eye Disease</li>
+                  <li>Auto Immune Disease</li>
+                  <li>Rheumatoid Arthritis</li>
+                  <li>Shingles</li>
+                  <li>Neuropathy</li>
+                  <li>And More</li>
+                </ul>
+              </div>
+              <a href="#" class="learn-more">
+                <span>Learn More</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <circle cx="12" cy="12" r="12" fill="white" />
+                  <path
+                    d="M7 11.25C6.58579 11.25 6.25 11.5858 6.25 12C6.25 12.4142 6.58579 12.75 7 12.75V11.25ZM17.5303 12.5303C17.8232 12.2374 17.8232 11.7626 17.5303 11.4697L12.7574 6.6967C12.4645 6.40381 11.9896 6.40381 11.6967 6.6967C11.4038 6.98959 11.4038 7.46447 11.6967 7.75736L15.9393 12L11.6967 16.2426C11.4038 16.5355 11.4038 17.0104 11.6967 17.3033C11.9896 17.5962 12.4645 17.5962 12.7574 17.3033L17.5303 12.5303ZM7 12.75H17V11.25H7V12.75Z"
+                    fill="#34055B"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
-        <div class="hero-section">
-          <div class="hero-container">
-            <div class="review">
-              <div class="star">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                >
-                  <path
-                    d="M8.55163 0.908493C8.73504 0.53687 9.26496 0.53687 9.44837 0.908493L11.8226 5.71919C11.8954 5.86677 12.0362 5.96905 12.1991 5.99271L17.508 6.76415C17.9181 6.82374 18.0818 7.32772 17.7851 7.61699L13.9435 11.3616C13.8257 11.4765 13.7719 11.642 13.7997 11.8042L14.7066 17.0916C14.7766 17.5001 14.3479 17.8116 13.9811 17.6187L9.23267 15.1223C9.08701 15.0457 8.91299 15.0457 8.76733 15.1223L4.01888 17.6187C3.65207 17.8116 3.22335 17.5001 3.29341 17.0916L4.20028 11.8042C4.2281 11.642 4.17433 11.4765 4.05648 11.3616L0.21491 7.61699C-0.0818487 7.32772 0.0819064 6.82374 0.492017 6.76415L5.80094 5.99271C5.9638 5.96905 6.10458 5.86677 6.17741 5.71919L8.55163 0.908493Z"
-                    fill="#F1CC08"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                >
-                  <path
-                    d="M8.55163 0.908493C8.73504 0.53687 9.26496 0.53687 9.44837 0.908493L11.8226 5.71919C11.8954 5.86677 12.0362 5.96905 12.1991 5.99271L17.508 6.76415C17.9181 6.82374 18.0818 7.32772 17.7851 7.61699L13.9435 11.3616C13.8257 11.4765 13.7719 11.642 13.7997 11.8042L14.7066 17.0916C14.7766 17.5001 14.3479 17.8116 13.9811 17.6187L9.23267 15.1223C9.08701 15.0457 8.91299 15.0457 8.76733 15.1223L4.01888 17.6187C3.65207 17.8116 3.22335 17.5001 3.29341 17.0916L4.20028 11.8042C4.2281 11.642 4.17433 11.4765 4.05648 11.3616L0.21491 7.61699C-0.0818487 7.32772 0.0819064 6.82374 0.492017 6.76415L5.80094 5.99271C5.9638 5.96905 6.10458 5.86677 6.17741 5.71919L8.55163 0.908493Z"
-                    fill="#F1CC08"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                >
-                  <path
-                    d="M8.55163 0.908493C8.73504 0.53687 9.26496 0.53687 9.44837 0.908493L11.8226 5.71919C11.8954 5.86677 12.0362 5.96905 12.1991 5.99271L17.508 6.76415C17.9181 6.82374 18.0818 7.32772 17.7851 7.61699L13.9435 11.3616C13.8257 11.4765 13.7719 11.642 13.7997 11.8042L14.7066 17.0916C14.7766 17.5001 14.3479 17.8116 13.9811 17.6187L9.23267 15.1223C9.08701 15.0457 8.91299 15.0457 8.76733 15.1223L4.01888 17.6187C3.65207 17.8116 3.22335 17.5001 3.29341 17.0916L4.20028 11.8042C4.2281 11.642 4.17433 11.4765 4.05648 11.3616L0.21491 7.61699C-0.0818487 7.32772 0.0819064 6.82374 0.492017 6.76415L5.80094 5.99271C5.9638 5.96905 6.10458 5.86677 6.17741 5.71919L8.55163 0.908493Z"
-                    fill="#F1CC08"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                >
-                  <path
-                    d="M8.55163 0.908493C8.73504 0.53687 9.26496 0.53687 9.44837 0.908493L11.8226 5.71919C11.8954 5.86677 12.0362 5.96905 12.1991 5.99271L17.508 6.76415C17.9181 6.82374 18.0818 7.32772 17.7851 7.61699L13.9435 11.3616C13.8257 11.4765 13.7719 11.642 13.7997 11.8042L14.7066 17.0916C14.7766 17.5001 14.3479 17.8116 13.9811 17.6187L9.23267 15.1223C9.08701 15.0457 8.91299 15.0457 8.76733 15.1223L4.01888 17.6187C3.65207 17.8116 3.22335 17.5001 3.29341 17.0916L4.20028 11.8042C4.2281 11.642 4.17433 11.4765 4.05648 11.3616L0.21491 7.61699C-0.0818487 7.32772 0.0819064 6.82374 0.492017 6.76415L5.80094 5.99271C5.9638 5.96905 6.10458 5.86677 6.17741 5.71919L8.55163 0.908493Z"
-                    fill="#F1CC08"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                >
-                  <path
-                    d="M8.55163 0.908493C8.73504 0.53687 9.26496 0.53687 9.44837 0.908493L11.8226 5.71919C11.8954 5.86677 12.0362 5.96905 12.1991 5.99271L17.508 6.76415C17.9181 6.82374 18.0818 7.32772 17.7851 7.61699L13.9435 11.3616C13.8257 11.4765 13.7719 11.642 13.7997 11.8042L14.7066 17.0916C14.7766 17.5001 14.3479 17.8116 13.9811 17.6187L9.23267 15.1223C9.08701 15.0457 8.91299 15.0457 8.76733 15.1223L4.01888 17.6187C3.65207 17.8116 3.22335 17.5001 3.29341 17.0916L4.20028 11.8042C4.2281 11.642 4.17433 11.4765 4.05648 11.3616L0.21491 7.61699C-0.0818487 7.32772 0.0819064 6.82374 0.492017 6.76415L5.80094 5.99271C5.9638 5.96905 6.10458 5.86677 6.17741 5.71919L8.55163 0.908493Z"
-                    fill="#F1CC08"
-                  />
-                </svg>
-              </div>
-              <p>2,000 Satisfied Customers</p>
-            </div>
-            <h2>Unique Gifts, Made Just for You</h2>
-            <p class="main-content">
-              Celebrate every occassion with personalized gifts designed to
-              bring joy and lasting memories. From birthdays to holidays, we've
-              got you covered.
+      </div>
+    </section>
+
+    <section class="our-story">
+      <div class="container">
+        <h2 class="section__title">Our Story</h2>
+        <div class="text-and-image">
+          <div class="text">
+            <p class="description">
+              We have helped thousands of patients over the last 20 years to
+              improve their health and reach their goals. Our combination of
+              traditional experience and cutting edge techniques has allowed us
+              to successfully treat a wide variety of illnesses and conditions.
             </p>
-            <div class="btns">
-              <a href="#" class="best-btn">Best Sellers</a>
-              <a href="#" class="shop-btn">Shop for Halloween</a>
+            <p class="description">
+              Our practice is dedicated to providing the very best of
+              Acupuncture and Chinese medicine to the central Florida community.
+            </p>
+            <p class="description">
+              We customize our treatments to each individual patient and strive
+              to deliver the best experience as well as excellent results. Our
+              Acupuncture physicians have over 4,000 hours of training, are
+              State of Florida Licensed, and National Board certified.
+            </p>
+            <a href="#"
+              >Learn More
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+              >
+                <path
+                  d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75V5.25ZM11.5303 6.53033C11.8232 6.23744 11.8232 5.76256 11.5303 5.46967L6.75736 0.696699C6.46447 0.403806 5.98959 0.403806 5.6967 0.696699C5.40381 0.989593 5.40381 1.46447 5.6967 1.75736L9.93934 6L5.6967 10.2426C5.40381 10.5355 5.40381 11.0104 5.6967 11.3033C5.98959 11.5962 6.46447 11.5962 6.75736 11.3033L11.5303 6.53033ZM1 6.75H11V5.25H1V6.75Z"
+                  fill="#280149"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="image">
+            <img
+              src="https://orlandoacupuncture.com/wp-content/uploads/2024/12/Our-Story-image.png"
+              alt="group photo"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule-consultation">
+      <div class="container">
+        <div class="text-and-image">
+          <div class="image">
+            <img
+              src="https://orlandoacupuncture.com/wp-content/uploads/2024/12/Schedule-your-consultation-image.png"
+              alt="girl"
+              class="desktop"
+            />
+            <img
+              src="https://orlandoacupuncture.com/wp-content/uploads/2024/12/Schedule-your-consultation-image-mobile.png"
+              alt="girl"
+              class="mobile"
+            />
+          </div>
+          <div class="text">
+            <h2 class="section__title">Schedule your consultation today</h2>
+            <p class="description">
+              A consultation with our clinic director, Dr. Barnett, helps
+              determine if acupuncture is right for you and allows us to create
+              a personalized treatment plan tailored to your needs.
+            </p>
+            <form action="">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="Phone"
+                required
+              />
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Enter your message.."
+                required
+              ></textarea>
+            </form>
+            <a href="#" class="primary-button primary-button-text"
+              >Send Message
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <circle cx="12" cy="12" r="12" fill="white" />
+                <path
+                  d="M7 11.25C6.58579 11.25 6.25 11.5858 6.25 12C6.25 12.4142 6.58579 12.75 7 12.75V11.25ZM17.5303 12.5303C17.8232 12.2374 17.8232 11.7626 17.5303 11.4697L12.7574 6.6967C12.4645 6.40381 11.9896 6.40381 11.6967 6.6967C11.4038 6.98959 11.4038 7.46447 11.6967 7.75736L15.9393 12L11.6967 16.2426C11.4038 16.5355 11.4038 17.0104 11.6967 17.3033C11.9896 17.5962 12.4645 17.5962 12.7574 17.3033L17.5303 12.5303ZM7 12.75H17V11.25H7V12.75Z"
+                  fill="#280149"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="FAQs">
+      <div class="container">
+        <h2 class="section__title">Frequently Asked Questions</h2>
+        <div class="faq-wrapper">
+          <div class="left section">
+            <div class="box visible">
+              <div class="question">
+                <p>What conditions can Orlando Acupuncture help with?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M10.0008 13.3341C9.89113 13.3348 9.78241 13.3138 9.68088 13.2723C9.57935 13.2308 9.48701 13.1697 9.40914 13.0925L4.40914 8.09247C4.25222 7.93555 4.16406 7.72272 4.16406 7.50081C4.16406 7.27889 4.25222 7.06606 4.40914 6.90914C4.56606 6.75222 4.77889 6.66406 5.00081 6.66406C5.22272 6.66406 5.43555 6.75222 5.59247 6.90914L10.0008 11.3258L14.4091 6.91747C14.5686 6.78095 14.7736 6.70961 14.9833 6.71771C15.1931 6.72581 15.392 6.81276 15.5404 6.96117C15.6889 7.10958 15.7758 7.30853 15.7839 7.51826C15.792 7.72799 15.7207 7.93305 15.5841 8.09247L10.5841 13.0925C10.4289 13.2464 10.2194 13.3332 10.0008 13.3341Z"
+                    fill="#280149"
+                  />
+                </svg>
+              </div>
+              <div class="answer">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusantium, fugit sapiente quaerat doloremque illo
+                  perferendis eum beatae maxime delectus nemo vero minus, qui
+                  libero error doloribus voluptate id consectetur. Esse!
+                </p>
+              </div>
+            </div>
+            <div class="box visible">
+              <div class="question">
+                <p>What can I expect during my first acupuncture treatment?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M10.0008 13.3341C9.89113 13.3348 9.78241 13.3138 9.68088 13.2723C9.57935 13.2308 9.48701 13.1697 9.40914 13.0925L4.40914 8.09247C4.25222 7.93555 4.16406 7.72272 4.16406 7.50081C4.16406 7.27889 4.25222 7.06606 4.40914 6.90914C4.56606 6.75222 4.77889 6.66406 5.00081 6.66406C5.22272 6.66406 5.43555 6.75222 5.59247 6.90914L10.0008 11.3258L14.4091 6.91747C14.5686 6.78095 14.7736 6.70961 14.9833 6.71771C15.1931 6.72581 15.392 6.81276 15.5404 6.96117C15.6889 7.10958 15.7758 7.30853 15.7839 7.51826C15.792 7.72799 15.7207 7.93305 15.5841 8.09247L10.5841 13.0925C10.4289 13.2464 10.2194 13.3332 10.0008 13.3341Z"
+                    fill="#280149"
+                  />
+                </svg>
+              </div>
+              <div class="answer">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusantium, fugit sapiente quaerat doloremque illo
+                  perferendis eum beatae maxime delectus nemo vero minus, qui
+                  libero error doloribus voluptate id consectetur. Esse!
+                </p>
+              </div>
+            </div>
+            <div class="box visible">
+              <div class="question">
+                <p>What is the New Patient Offer?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M10.0008 13.3341C9.89113 13.3348 9.78241 13.3138 9.68088 13.2723C9.57935 13.2308 9.48701 13.1697 9.40914 13.0925L4.40914 8.09247C4.25222 7.93555 4.16406 7.72272 4.16406 7.50081C4.16406 7.27889 4.25222 7.06606 4.40914 6.90914C4.56606 6.75222 4.77889 6.66406 5.00081 6.66406C5.22272 6.66406 5.43555 6.75222 5.59247 6.90914L10.0008 11.3258L14.4091 6.91747C14.5686 6.78095 14.7736 6.70961 14.9833 6.71771C15.1931 6.72581 15.392 6.81276 15.5404 6.96117C15.6889 7.10958 15.7758 7.30853 15.7839 7.51826C15.792 7.72799 15.7207 7.93305 15.5841 8.09247L10.5841 13.0925C10.4289 13.2464 10.2194 13.3332 10.0008 13.3341Z"
+                    fill="#280149"
+                  />
+                </svg>
+              </div>
+              <div class="answer">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusantium, fugit sapiente quaerat doloremque illo
+                  perferendis eum beatae maxime delectus nemo vero minus, qui
+                  libero error doloribus voluptate id consectetur. Esse!
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="question">
+                <p>Lorem ipsum dolor sit amet consectetur?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M10.0008 13.3341C9.89113 13.3348 9.78241 13.3138 9.68088 13.2723C9.57935 13.2308 9.48701 13.1697 9.40914 13.0925L4.40914 8.09247C4.25222 7.93555 4.16406 7.72272 4.16406 7.50081C4.16406 7.27889 4.25222 7.06606 4.40914 6.90914C4.56606 6.75222 4.77889 6.66406 5.00081 6.66406C5.22272 6.66406 5.43555 6.75222 5.59247 6.90914L10.0008 11.3258L14.4091 6.91747C14.5686 6.78095 14.7736 6.70961 14.9833 6.71771C15.1931 6.72581 15.392 6.81276 15.5404 6.96117C15.6889 7.10958 15.7758 7.30853 15.7839 7.51826C15.792 7.72799 15.7207 7.93305 15.5841 8.09247L10.5841 13.0925C10.4289 13.2464 10.2194 13.3332 10.0008 13.3341Z"
+                    fill="#280149"
+                  />
+                </svg>
+              </div>
+              <div class="answer">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusantium, fugit sapiente quaerat doloremque illo
+                  perferendis eum beatae maxime delectus nemo vero minus, qui
+                  libero error doloribus voluptate id consectetur. Esse!
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="question">
+                <p>Lorem ipsum dolor sit amet consectetur?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M10.0008 13.3341C9.89113 13.3348 9.78241 13.3138 9.68088 13.2723C9.57935 13.2308 9.48701 13.1697 9.40914 13.0925L4.40914 8.09247C4.25222 7.93555 4.16406 7.72272 4.16406 7.50081C4.16406 7.27889 4.25222 7.06606 4.40914 6.90914C4.56606 6.75222 4.77889 6.66406 5.00081 6.66406C5.22272 6.66406 5.43555 6.75222 5.59247 6.90914L10.0008 11.3258L14.4091 6.91747C14.5686 6.78095 14.7736 6.70961 14.9833 6.71771C15.1931 6.72581 15.392 6.81276 15.5404 6.96117C15.6889 7.10958 15.7758 7.30853 15.7839 7.51826C15.792 7.72799 15.7207 7.93305 15.5841 8.09247L10.5841 13.0925C10.4289 13.2464 10.2194 13.3332 10.0008 13.3341Z"
+                    fill="#280149"
+                  />
+                </svg>
+              </div>
+              <div class="answer">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusantium, fugit sapiente quaerat doloremque illo
+                  perferendis eum beatae maxime delectus nemo vero minus, qui
+                  libero error doloribus voluptate id consectetur. Esse!
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="question">
+                <p>Lorem ipsum dolor sit amet consectetur?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M10.0008 13.3341C9.89113 13.3348 9.78241 13.3138 9.68088 13.2723C9.57935 13.2308 9.48701 13.1697 9.40914 13.0925L4.40914 8.09247C4.25222 7.93555 4.16406 7.72272 4.16406 7.50081C4.16406 7.27889 4.25222 7.06606 4.40914 6.90914C4.56606 6.75222 4.77889 6.66406 5.00081 6.66406C5.22272 6.66406 5.43555 6.75222 5.59247 6.90914L10.0008 11.3258L14.4091 6.91747C14.5686 6.78095 14.7736 6.70961 14.9833 6.71771C15.1931 6.72581 15.392 6.81276 15.5404 6.96117C15.6889 7.10958 15.7758 7.30853 15.7839 7.51826C15.792 7.72799 15.7207 7.93305 15.5841 8.09247L10.5841 13.0925C10.4289 13.2464 10.2194 13.3332 10.0008 13.3341Z"
+                    fill="#280149"
+                  />
+                </svg>
+              </div>
+              <div class="answer">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusantium, fugit sapiente quaerat doloremque illo
+                  perferendis eum beatae maxime delectus nemo vero minus, qui
+                  libero error doloribus voluptate id consectetur. Esse!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="right section">
+            <div class="box visible">
+              <div class="question">
+                <p>What therapies are offered at Orlando Acupuncture?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M10.0008 13.3341C9.89113 13.3348 9.78241 13.3138 9.68088 13.2723C9.57935 13.2308 9.48701 13.1697 9.40914 13.0925L4.40914 8.09247C4.25222 7.93555 4.16406 7.72272 4.16406 7.50081C4.16406 7.27889 4.25222 7.06606 4.40914 6.90914C4.56606 6.75222 4.77889 6.66406 5.00081 6.66406C5.22272 6.66406 5.43555 6.75222 5.59247 6.90914L10.0008 11.3258L14.4091 6.91747C14.5686 6.78095 14.7736 6.70961 14.9833 6.71771C15.1931 6.72581 15.392 6.81276 15.5404 6.96117C15.6889 7.10958 15.7758 7.30853 15.7839 7.51826C15.792 7.72799 15.7207 7.93305 15.5841 8.09247L10.5841 13.0925C10.4289 13.2464 10.2194 13.3332 10.0008 13.3341Z"
+                    fill="#280149"
+                  />
+                </svg>
+              </div>
+              <div class="answer">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos
+                  suscipit quisquam dignissimos temporibus harum corrupti unde
+                  deleniti dolores odio distinctio consequuntur laboriosam,
+                  exercitationem modi vitae ea facilis. Obcaecati, doloremque
+                  totam!
+                </p>
+              </div>
+            </div>
+            <div class="box visible">
+              <div class="question">
+                <p>What does Acupuncture Therapy feel like?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M10.0008 13.3341C9.89113 13.3348 9.78241 13.3138 9.68088 13.2723C9.57935 13.2308 9.48701 13.1697 9.40914 13.0925L4.40914 8.09247C4.25222 7.93555 4.16406 7.72272 4.16406 7.50081C4.16406 7.27889 4.25222 7.06606 4.40914 6.90914C4.56606 6.75222 4.77889 6.66406 5.00081 6.66406C5.22272 6.66406 5.43555 6.75222 5.59247 6.90914L10.0008 11.3258L14.4091 6.91747C14.5686 6.78095 14.7736 6.70961 14.9833 6.71771C15.1931 6.72581 15.392 6.81276 15.5404 6.96117C15.6889 7.10958 15.7758 7.30853 15.7839 7.51826C15.792 7.72799 15.7207 7.93305 15.5841 8.09247L10.5841 13.0925C10.4289 13.2464 10.2194 13.3332 10.0008 13.3341Z"
+                    fill="#280149"
+                  />
+                </svg>
+              </div>
+              <div class="answer">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusantium, fugit sapiente quaerat doloremque illo
+                  perferendis eum beatae maxime delectus nemo vero minus, qui
+                  libero error doloribus voluptate id consectetur. Esse!
+                </p>
+              </div>
+            </div>
+            <div class="box visible">
+              <div class="question">
+                <p>How many treatments will I need to see results?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M10.0008 13.3341C9.89113 13.3348 9.78241 13.3138 9.68088 13.2723C9.57935 13.2308 9.48701 13.1697 9.40914 13.0925L4.40914 8.09247C4.25222 7.93555 4.16406 7.72272 4.16406 7.50081C4.16406 7.27889 4.25222 7.06606 4.40914 6.90914C4.56606 6.75222 4.77889 6.66406 5.00081 6.66406C5.22272 6.66406 5.43555 6.75222 5.59247 6.90914L10.0008 11.3258L14.4091 6.91747C14.5686 6.78095 14.7736 6.70961 14.9833 6.71771C15.1931 6.72581 15.392 6.81276 15.5404 6.96117C15.6889 7.10958 15.7758 7.30853 15.7839 7.51826C15.792 7.72799 15.7207 7.93305 15.5841 8.09247L10.5841 13.0925C10.4289 13.2464 10.2194 13.3332 10.0008 13.3341Z"
+                    fill="#280149"
+                  />
+                </svg>
+              </div>
+              <div class="answer">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusantium, fugit sapiente quaerat doloremque illo
+                  perferendis eum beatae maxime delectus nemo vero minus, qui
+                  libero error doloribus voluptate id consectetur. Esse!
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="question">
+                <p>Lorem ipsum dolor sit amet consectetur?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M10.0008 13.3341C9.89113 13.3348 9.78241 13.3138 9.68088 13.2723C9.57935 13.2308 9.48701 13.1697 9.40914 13.0925L4.40914 8.09247C4.25222 7.93555 4.16406 7.72272 4.16406 7.50081C4.16406 7.27889 4.25222 7.06606 4.40914 6.90914C4.56606 6.75222 4.77889 6.66406 5.00081 6.66406C5.22272 6.66406 5.43555 6.75222 5.59247 6.90914L10.0008 11.3258L14.4091 6.91747C14.5686 6.78095 14.7736 6.70961 14.9833 6.71771C15.1931 6.72581 15.392 6.81276 15.5404 6.96117C15.6889 7.10958 15.7758 7.30853 15.7839 7.51826C15.792 7.72799 15.7207 7.93305 15.5841 8.09247L10.5841 13.0925C10.4289 13.2464 10.2194 13.3332 10.0008 13.3341Z"
+                    fill="#280149"
+                  />
+                </svg>
+              </div>
+              <div class="answer">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusantium, fugit sapiente quaerat doloremque illo
+                  perferendis eum beatae maxime delectus nemo vero minus, qui
+                  libero error doloribus voluptate id consectetur. Esse!
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="question">
+                <p>Lorem ipsum dolor sit amet consectetur?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M10.0008 13.3341C9.89113 13.3348 9.78241 13.3138 9.68088 13.2723C9.57935 13.2308 9.48701 13.1697 9.40914 13.0925L4.40914 8.09247C4.25222 7.93555 4.16406 7.72272 4.16406 7.50081C4.16406 7.27889 4.25222 7.06606 4.40914 6.90914C4.56606 6.75222 4.77889 6.66406 5.00081 6.66406C5.22272 6.66406 5.43555 6.75222 5.59247 6.90914L10.0008 11.3258L14.4091 6.91747C14.5686 6.78095 14.7736 6.70961 14.9833 6.71771C15.1931 6.72581 15.392 6.81276 15.5404 6.96117C15.6889 7.10958 15.7758 7.30853 15.7839 7.51826C15.792 7.72799 15.7207 7.93305 15.5841 8.09247L10.5841 13.0925C10.4289 13.2464 10.2194 13.3332 10.0008 13.3341Z"
+                    fill="#280149"
+                  />
+                </svg>
+              </div>
+              <div class="answer">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusantium, fugit sapiente quaerat doloremque illo
+                  perferendis eum beatae maxime delectus nemo vero minus, qui
+                  libero error doloribus voluptate id consectetur. Esse!
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="question">
+                <p>Lorem ipsum dolor sit amet consectetur?</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M10.0008 13.3341C9.89113 13.3348 9.78241 13.3138 9.68088 13.2723C9.57935 13.2308 9.48701 13.1697 9.40914 13.0925L4.40914 8.09247C4.25222 7.93555 4.16406 7.72272 4.16406 7.50081C4.16406 7.27889 4.25222 7.06606 4.40914 6.90914C4.56606 6.75222 4.77889 6.66406 5.00081 6.66406C5.22272 6.66406 5.43555 6.75222 5.59247 6.90914L10.0008 11.3258L14.4091 6.91747C14.5686 6.78095 14.7736 6.70961 14.9833 6.71771C15.1931 6.72581 15.392 6.81276 15.5404 6.96117C15.6889 7.10958 15.7758 7.30853 15.7839 7.51826C15.792 7.72799 15.7207 7.93305 15.5841 8.09247L10.5841 13.0925C10.4289 13.2464 10.2194 13.3332 10.0008 13.3341Z"
+                    fill="#280149"
+                  />
+                </svg>
+              </div>
+              <div class="answer">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusantium, fugit sapiente quaerat doloremque illo
+                  perferendis eum beatae maxime delectus nemo vero minus, qui
+                  libero error doloribus voluptate id consectetur. Esse!
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+        <button class="read-btn">
+          <span>Read More</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="start-healing-journey">
+      <div class="container">
+        <div class="text-and-image">
+          <div class="text">
+            <h2 class="section__title">
+              Start Your Healing Journey with a Special Offer
+            </h2>
+            <p class="description">
+              Enjoy a personalized consultation for just $45 (normally $150) and
+              discover how our expert care can help you overcome chronic pain
+              and get to the root of your complex condition.
+            </p>
+            <a href="#" class="primary-button primary-button-text"
+              >Schedule Now
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <circle cx="12" cy="12" r="12" fill="white" />
+                <path
+                  d="M7 11.25C6.58579 11.25 6.25 11.5858 6.25 12C6.25 12.4142 6.58579 12.75 7 12.75V11.25ZM17.5303 12.5303C17.8232 12.2374 17.8232 11.7626 17.5303 11.4697L12.7574 6.6967C12.4645 6.40381 11.9896 6.40381 11.6967 6.6967C11.4038 6.98959 11.4038 7.46447 11.6967 7.75736L15.9393 12L11.6967 16.2426C11.4038 16.5355 11.4038 17.0104 11.6967 17.3033C11.9896 17.5962 12.4645 17.5962 12.7574 17.3033L17.5303 12.5303ZM7 12.75H17V11.25H7V12.75Z"
+                  fill="#280149"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="image">
+            <img
+              src="https://orlandoacupuncture.com/wp-content/uploads/2024/12/special-offer-min.png"
+              alt="consultation"
+              class="consultation desktop"
+            />
+            <img
+              src="https://orlandoacupuncture.com/wp-content/uploads/2024/12/special-offer-mobile.png"
+              alt="consultation"
+              class="mobile"
+            />
+            <div class="centered-image desktop">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="160"
+                height="80"
+                viewBox="0 0 160 80"
+                fill="none"
+              >
+                <g style="mix-blend-mode: multiply" opacity="0.95">
+                  <path
+                    d="M53.3332 26.6673C82.7884 26.6673 106.667 50.5455 106.667 80.0006C106.667 109.456 82.7884 133.334 53.3332 133.334C23.8781 133.334 0 109.456 0 80.0006C0 50.5455 23.8781 26.6673 53.3332 26.6673Z"
+                    fill="#76D7C4"
+                  />
+                </g>
+                <g style="mix-blend-mode: multiply" opacity="0.95">
+                  <path
+                    d="M106.667 26.6673C136.122 26.6673 160.001 50.5455 160.001 80.0006C160.001 109.456 136.122 133.334 106.667 133.334C77.2121 133.334 53.334 109.456 53.334 80.0006C53.334 50.5455 77.2121 26.6673 106.667 26.6673Z"
+                    fill="#DDA0DD"
+                  />
+                </g>
+                <g style="mix-blend-mode: multiply" opacity="0.95">
+                  <path
+                    d="M79.9993 53.3334C109.454 53.3334 133.333 77.2115 133.333 106.667C133.333 136.122 109.454 160 79.9993 160C50.5441 160 26.666 136.122 26.666 106.667C26.666 77.2115 50.5441 53.3334 79.9993 53.3334Z"
+                    fill="#FFC0CB"
+                  />
+                </g>
+                <g style="mix-blend-mode: multiply" opacity="0.95">
+                  <path
+                    d="M79.9993 -0.000656128C109.454 -0.000656128 133.333 23.8775 133.333 53.3327C133.333 82.7879 109.454 106.666 79.9993 106.666C50.5441 106.666 26.666 82.7879 26.666 53.3327C26.666 23.8775 50.5441 -0.000656128 79.9993 -0.000656128Z"
+                    fill="#ADD8E6"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var ques = document.querySelectorAll(
+        ".FAQs .container .faq-wrapper .section .box"
+      );
+      ques.forEach(function (ele) {
+        ele.addEventListener("click", function () {
+          var openElement = document.querySelector(
+            ".FAQs .container .faq-wrapper .section .box.active-box"
+          );
+          if (openElement && openElement !== ele) {
+            openElement.classList.remove("active-box");
+          }
+          ele.classList.toggle("active-box");
+        });
+      });
+    </script>
+
+    <script>
+      const readBtn = document.querySelector(".read-btn");
+      const leftBoxes = document.querySelectorAll(
+        ".FAQs .faq-wrapper .left .box"
+      );
+      const rightBoxes = document.querySelectorAll(
+        ".FAQs .faq-wrapper .right .box"
+      );
+      let readAll = false;
+
+      readBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        if (!readAll) {
+          // Show all boxes in both columns
+          leftBoxes.forEach((box) => box.classList.add("visible"));
+          rightBoxes.forEach((box) => box.classList.add("visible"));
+          readBtn.querySelector("span").innerText = "Read Less"; // Update button text
+        } else {
+          // Limit visibility to the first 3 boxes in each column
+          leftBoxes.forEach((box, index) => {
+            if (index >= 3) {
+              box.classList.remove("visible");
+            }
+          });
+          rightBoxes.forEach((box, index) => {
+            if (index >= 3) {
+              box.classList.remove("visible");
+            }
+          });
+          readBtn.querySelector("span").innerText = "Read More"; // Update button text
+        }
+
+        readAll = !readAll; // Toggle the readAll state
+      });
+    </script>
   </body>
 </html>
