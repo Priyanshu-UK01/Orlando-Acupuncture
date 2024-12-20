@@ -70,7 +70,6 @@
   padding: 20px 20px 60px;
   position: relative;
   background: #edf7f7;
-  overflow: hidden;
 }
 
 .hero-section .container {
@@ -169,8 +168,8 @@
   height: 160px;
 
   position: absolute;
-  right: -70px;
-  bottom: -70px;
+  right: -75px;
+  bottom: -73px;
   mix-blend-mode: multiply;
 }
 
@@ -582,7 +581,7 @@
   width: 100%;
 }
 
-.container {
+.our-story .container {
   max-width: 1280px;
   width: 100%;
   margin: auto;
@@ -728,18 +727,23 @@
 ==========================================*/
 
 .start-healing-journey .container {
-  max-width: 100%;
+  width: 100%;
+  background: #edf7f7;
+  overflow: hidden;
 }
 
 .start-healing-journey .text-and-image {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  max-width: 1600px;
+  width: 100%;
+  margin: auto;
 }
 
 .start-healing-journey .text {
-  max-width: 720px;
-  width: 100%;
+  width: 50%;
   padding: 60px 60px 60px 100px;
   display: flex;
   flex-direction: column;
@@ -754,11 +758,9 @@
 }
 
 .start-healing-journey .image {
-  max-width: 720px;
-  width: 100%;
+  width: 50%;
   position: relative;
   display: flex;
-  align-self: stretch;
 }
 
 .start-healing-journey .image img {
@@ -767,9 +769,15 @@
 
 .start-healing-journey .image .centered-image {
   position: absolute;
-  bottom: 0;
+  bottom: -80px;
   left: -80px;
   display: flex;
+}
+
+.start-healing-journey .image .centered-image img {
+    width: 160px;
+    height: 160px;
+    mix-blend-mode: multiply;
 }
 
 @media (max-width: 1024px) {
@@ -1005,6 +1013,11 @@
 
   .start-healing-journey .text-and-image {
     flex-direction: column;
+  }
+
+  .start-healing-journey .image,
+  .start-healing-journey .text {
+    width: 100%;
   }
 
   .start-healing-journey .text {
