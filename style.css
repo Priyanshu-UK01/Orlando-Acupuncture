@@ -1,3 +1,255 @@
+@font-face {
+  font-family: Recoleta;
+  src: url("Fontspring-DEMO-recoletaalt-regular-iF663b21f697e65.woff")
+      format("woff"),
+    url("Fontspring-DEMO-recoletaalt-regular-iF663b21f697e65.woff")
+      format("woff");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #280149;
+  --secondary-color: #3a0267;
+  --primary-font: Recoleta;
+  --secondary-font: Mulish;
+}
+
+.section__title {
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 42px; /* 116.667% */
+}
+
+.description {
+  color: var(--primary-color);
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.primary-button {
+  padding: 12px 24px;
+  border-radius: 60px;
+  background: #880164;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+}
+
+.primary-button-text {
+  color: #fff;
+  text-align: center;
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 133.333% */
+}
+
+.mobile {
+  display: none !important;
+}
+/*==============================
+        Hero Section
+==============================*/
+
+.hero-section {
+  width: 100%;
+  padding: 20px 20px 60px;
+  position: relative;
+  background: #edf7f7;
+}
+
+.hero-section .container {
+  max-width: 1280px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  align-self: stretch;
+  margin: auto;
+}
+
+.hero-section .section-content {
+  max-width: 610px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-section .review {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: #edf7f7;
+  box-shadow: 3px 3px 15px 0px rgba(50, 1, 90, 0.08);
+  margin-bottom: 20px;
+}
+
+.hero-section .ratting {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2px;
+  margin-bottom: 6px;
+}
+
+.hero-section .ratting svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hero-section .review-text {
+  width: 100%;
+  color: var(--primary-color);
+  font-family: var(--secondary-font);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 140% */
+}
+
+.hero-section .section__title {
+  font-size: 48px;
+  line-height: 54px;
+  margin-bottom: 16px;
+}
+
+.hero-section .description {
+  margin-bottom: 32px;
+}
+
+.hero-section .primary-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.hero-section .video-container {
+  max-width: 610px;
+  width: 100%;
+
+  position: relative;
+}
+
+.hero-section .hero-image {
+  max-width: 610px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.hero-section .play-btn {
+  width: 48px;
+  height: 48px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-section .flower-image {
+  width: 160px;
+  height: 160px;
+
+  position: absolute;
+  right: -75px;
+  bottom: -73px;
+  mix-blend-mode: multiply;
+}
+
+.hero-section .mobile-btn {
+  display: none;
+}
+
+/*============================
+        Special About 
+=============================*/
+
+.special-about {
+  padding: 60px 20px 40px 20px;
+  width: 100%;
+}
+
+.special-about .container {
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+}
+
+.special-about .section__title {
+  text-align: center;
+  align-self: stretch;
+  margin-bottom: 40px;
+}
+
+.special-about .feature-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+
+.special-about .feature {
+  max-width: 290px;
+  width: 100%;
+}
+
+.special-about .feature-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  background: #edf7f7;
+  margin-bottom: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.special-about .feature-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.special-about .feature-name {
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 127.273% */
+  margin-bottom: 16px;
+}
+
+.special-about .feature-description {
+  color: var(--primary-color);
+  font-family: var(--secondary-font);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px; /* 140% */
+}
+
+/*==============================
+        Our Services
+===============================*/
+
 .our-services {
   width: 100%;
   padding: 40px 20px 60px;
@@ -167,7 +419,638 @@
   background-repeat: no-repeat;
 }
 
+/*=====================
+        FAQ
+======================*/
+
+.FAQs {
+  width: 100%;
+  padding: 40px 20px 60px 20px;
+}
+
+.FAQs .container {
+  max-width: 1240px;
+  width: 100%;
+  margin: auto;
+}
+
+.FAQs .section__title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.FAQs .faq-wrapper {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.FAQs .section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.FAQs .box {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 16px;
+  gap: 16px;
+  cursor: pointer;
+
+  border-radius: 8px;
+  background: #edf7f7;
+}
+
+.FAQs .box.visible {
+  display: flex;
+}
+
+.FAQs .question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.FAQs .question p {
+  flex: 1 0 0;
+  color: var(--primary-color);
+  text-align: left;
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 133.333% */
+}
+
+.FAQs .question svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: rotate 0.3s ease-in-out;
+}
+
+.FAQs .active-box .question svg {
+  rotate: 180deg;
+  transition: rotate 0.3s ease-in-out;
+}
+
+.FAQs .answer {
+  width: 100%;
+  display: none;
+}
+
+.FAQs .active-box .answer {
+  display: inline-block;
+}
+
+.FAQs .answer p {
+  color: var(--primary-color);
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* 133.333% */
+  text-align: left;
+}
+
+.FAQs .read-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  align-self: center;
+  width: 100%;
+  margin: auto;
+}
+
+.FAQs .read-btn span {
+  color: var(--primary-color);
+  text-align: center;
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 137.5% */
+
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid var(--primary-color);
+}
+
+/*==========================
+        We Treat
+===========================*/
+
+.we-treat {
+  width: 100%;
+  padding: 60px 20px;
+}
+
+.we-treat .container {
+  max-width: 1240px;
+  width: 100%;
+  margin: auto;
+}
+
+.we-treat .section-header {
+  max-width: 740px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.we-treat .section__title {
+  color: var(--secondary-color);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.we-treat .description {
+  margin-bottom: 12px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.we-treat .description:last-child {
+  margin-bottom: 0;
+}
+
+.we-treat .card-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  align-self: stretch;
+}
+
+.we-treat .card {
+  max-width: 392px;
+  width: 100%;
+  min-height: 382px;
+  position: relative;
+
+  border-radius: 20px;
+
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.we-treat .card-wrapper .card:first-child {
+  background-color: rgba(231, 231, 255, 0.5);
+  background-image: url("https://orlandoacupuncture.com/wp-content/uploads/2024/12/First-Card-Background.png");
+}
+
+.we-treat .card-wrapper .card:nth-child(2) {
+  background-color: rgba(241, 192, 208, 0.7);
+  background-image: url("https://orlandoacupuncture.com/wp-content/uploads/2024/12/Second-Card-Background.png");
+}
+
+.we-treat .card-wrapper .card:nth-child(3) {
+  background-color: rgba(196, 236, 236, 0.7);
+  background-image: url("https://orlandoacupuncture.com/wp-content/uploads/2024/12/Third-Card-Background.png");
+}
+
+.we-treat .card:hover {
+  background-image: unset;
+}
+
+.we-treat .content svg {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.we-treat .content .treatment {
+  width: 100%;
+  padding: 16px 10px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+.we-treat .card:first-child .content .treatment {
+  background: #34055b;
+}
+
+.we-treat .card:nth-child(2) .content .treatment {
+  background: #880164;
+}
+
+.we-treat .card:nth-child(3) .content .treatment {
+  background: #026969;
+}
+
+.we-treat .content .treatment p {
+  color: #fff;
+  font-family: var(--primary-font);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 125% */
+  text-align: center;
+  width: 100%;
+}
+
+.we-treat .card:hover .content {
+  display: none;
+}
+
+.we-treat .card .hover-content {
+  display: none;
+}
+
+.we-treat .card:hover .hover-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 20px;
+
+  max-width: 392px;
+  width: 100%;
+  min-height: 382px;
+}
+
+.we-treat .card:first-child .hover-content {
+  background: #34055b;
+}
+
+.we-treat .card:nth-child(2) .hover-content {
+  background: #880164;
+}
+
+.we-treat .card:nth-child(3) .hover-content {
+  background: #026969;
+}
+
+.we-treat .hover-content .treatment {
+  color: #fff;
+  font-family: var(--primary-font);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 125% */
+  margin-bottom: 16px;
+}
+
+.we-treat .hover-content .treatment-list {
+  padding-left: 20px;
+  margin-bottom: 32px;
+}
+
+.we-treat .hover-content li {
+  color: #fff;
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+.we-treat .hover-content .learn-more {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.we-treat .hover-content .learn-more span {
+  color: #fff;
+  font-family: var(--secondary-font);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px; /* 140% */
+}
+
+.we-treat .hover-content .learn-more svg {
+  width: 24px;
+  height: 24px;
+}
+
+/*==========================
+        Our Story
+==========================*/
+
+.our-story {
+  background: #edf7f7;
+  padding: 60px 20px 40px 20px;
+  width: 100%;
+}
+
+.our-story .container {
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+}
+
+.our-story h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.our-story .text-and-image {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.our-story .text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.our-story a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #280149;
+  font-family: var(--secondary-font);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 21px;
+  text-decoration: none;
+}
+
+.our-story a svg {
+  width: 12px;
+  height: 12px;
+}
+
+.our-story .image {
+  width: 50%;
+}
+
+.our-story .image img {
+  width: 100%;
+}
+
+/*====================================
+        Schedule Consulation
+====================================*/
+
+.schedule-consultation {
+  background: #edf7f7;
+  padding: 40px 20px 60px 20px;
+}
+
+.schedule-consultation .text-and-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule-consultation .image {
+  width: 50%;
+  display: flex;
+  align-self: stretch;
+  max-width: 620px;
+}
+
+.schedule-consultation .image img {
+  width: 100%;
+}
+
+.schedule-consultation .text {
+  width: 50%;
+  border-radius: 0px 20px 20px 0px;
+  background: #fff;
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.schedule-consultation .text p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.schedule-consultation form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.schedule-consultation form input {
+  display: flex;
+  padding: 12px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.schedule-consultation form input::placeholder,
+.schedule-consultation form textarea::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-family: var(--secondary-font);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.schedule-consultation form textarea {
+  display: flex;
+  height: 100px;
+  padding: 12px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.schedule-consultation a,
+.start-healing-journey a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+/*==========================================
+        Start Healing Journey
+==========================================*/
+
+.start-healing-journey .container {
+  width: 100%;
+  background: #edf7f7;
+  overflow: hidden;
+}
+
+.start-healing-journey .text-and-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 1600px;
+  width: 100%;
+  margin: auto;
+}
+
+.start-healing-journey .text {
+  width: 50%;
+  padding: 60px 60px 60px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.start-healing-journey p {
+  margin-bottom: 16px;
+}
+
+.start-healing-journey .image {
+  width: 50%;
+  position: relative;
+  display: flex;
+}
+
+.start-healing-journey .image img {
+  width: 100%;
+}
+
+.start-healing-journey .image .centered-image {
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  display: flex;
+}
+
+.start-healing-journey .image .centered-image img {
+  width: 160px !important;
+  height: 160px !important;
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 1024px) {
+  .hero-section .flower-image {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
+  .mobile {
+    display: flex !important;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+
+  /*==========================
+        Hero Section
+  ==========================*/
+
+  .hero-section {
+    padding: 16px 20px 40px;
+  }
+
+  .hero-section .container {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .hero-section .ratting {
+    justify-content: center;
+  }
+
+  .hero-section .review-text {
+    text-align: center;
+  }
+
+  .hero-section .section__title {
+    font-size: 40px;
+    line-height: 46px;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  .hero-section .description {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .hero-section .section-content .primary-button {
+    display: none;
+  }
+
+  .hero-section .mobile-btn {
+    display: flex;
+    margin-top: 32px;
+  }
+
+  /*============================
+        Special About
+  =============================*/
+  .special-about {
+    padding: 40px 20px 30px 20px;
+  }
+
+  .special-about .section__title {
+    margin-bottom: 32px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .special-about .feature-wrapper {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .special-about .feature {
+    max-width: 100%;
+  }
+
+  .special-about .feature-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 20px;
+  }
+
+  .special-about .feature-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .special-about .feature-name {
+    margin-bottom: 12px;
+  }
+
+  /*========================
+        Our Services
+  ========================*/
+
   .our-services {
     padding: 30px 20px 44px;
   }
@@ -209,5 +1092,161 @@
 
   .our-services .slick-next {
     right: calc(50% - 75px);
+  }
+
+  /*======================
+        We Treat
+  ======================*/
+
+  .we-treat {
+    padding: 40px 20px 44px;
+  }
+
+  .we-treat .section-header {
+    margin-bottom: 32px;
+  }
+
+  .we-treat .section__title {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 12px;
+  }
+
+  .we-treat .description {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .we-treat .card-wrapper {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /*==================
+        FAQ
+  ===================*/
+
+  .FAQs {
+    padding: 30px 20px 44px 20px;
+  }
+
+  .FAQs .section__title {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 32px;
+  }
+
+  .FAQs .faq-wrapper {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .FAQs .section {
+    gap: 16px;
+    max-width: unset;
+  }
+
+  .FAQs .question p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .FAQs .answer p {
+    font-size: 15px;
+  }
+
+  /*=====================
+        Our Story
+  =====================*/
+
+  .our-story {
+    padding: 40px 20px 30px 20px;
+  }
+
+  .our-story h2 {
+    margin-bottom: 20px;
+  }
+
+  .our-story .text-and-image {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .our-story .text {
+    width: 100%;
+  }
+
+  .our-story .text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .our-story a {
+    margin-top: 8px;
+  }
+
+  .our-story .image {
+    width: 100%;
+  }
+
+  /*=================================
+        Schedule Consulation
+  =================================*/
+
+  .schedule-consultation {
+    padding: 30px 20px 40px 20px;
+  }
+
+  .schedule-consultation .text-and-image {
+    flex-direction: column-reverse;
+  }
+
+  .schedule-consultation .image,
+  .schedule-consultation .text {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .schedule-consultation .text {
+    border-radius: 16px 16px 0px 0px;
+    padding: 20px 16px;
+  }
+
+  .schedule-consultation .text h2 {
+    font-size: 30px;
+    text-align: center;
+    line-height: 36px;
+  }
+
+  .schedule-consultation .text p {
+    text-align: center;
+  }
+
+  .schedule-consultation form {
+    margin-bottom: 12px;
+  }
+
+  /*===================================
+        Start Healing Journey
+  ===================================*/
+
+  .start-healing-journey .text-and-image {
+    flex-direction: column;
+  }
+
+  .start-healing-journey .image,
+  .start-healing-journey .text {
+    width: 100%;
+  }
+
+  .start-healing-journey .text {
+    padding: 40px 20px;
+    align-items: center;
+  }
+
+  .start-healing-journey h2,
+  .start-healing-journey p {
+    text-align: center;
   }
 }
