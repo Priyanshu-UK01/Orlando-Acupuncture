@@ -299,7 +299,7 @@
         </div>
 
         <div class="card-wrapper">
-          <div class="carousel-container">
+          <div class="services-carousel">
             <div class="card">
               <div class="card-img">
                 <img
@@ -781,6 +781,94 @@
       </div>
     </section>
 
+    <section class="success-stories">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section__title">Success Stories</h2>
+          <p class="description">
+            Don't take our word for it, hear people like you tell their stories!
+          </p>
+        </div>
+
+        <div class="video-wrapper">
+          <div class="stories-carousel">
+            <div class="video-box">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/KnaiqZldOj4?si=KatAx_a3RHqm2fxg"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-box">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/zgFAj1NyAyI?si=dhrYnuZcd56bePdO"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-box">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/g1Ir8eemd7g?si=g42VmD4HySmbzBwz"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-box">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/uuq7u7FW-OM?si=RNZBbbXH_tGLFB0W"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-box">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/tzLlEO8TgRk?si=U3Q1pVzHGHeukW7H"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-box">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/RuJKEm_riFs?si=-cakFs7XH9WIeEuj"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="FAQs">
       <div class="container">
         <h2 class="section__title">Frequently Asked Questions</h2>
@@ -1206,7 +1294,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
     <script>
-      window.jQuery(".carousel-container").slick({
+      window.jQuery(".services-carousel").slick({
         slidesToShow: 2,
         slidesToScroll: 1,
         dots: true,
@@ -1232,6 +1320,39 @@
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+
+      window.dispatchEvent(new Event("resize"));
+    </script>
+
+    <script>
+      window.jQuery(".stories-carousel").slick({
+        centerMode: true,
+        centerPadding: "20px",
+        slidesToShow: 3,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              centerMode: false,
+              centerPadding: "0px",
+              infinite: false,
+            },
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              centerMode: false,
+              centerPadding: "0px",
+              infinite: false,
             },
           },
         ],
