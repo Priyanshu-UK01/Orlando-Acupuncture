@@ -430,6 +430,8 @@
 
 .success-stories .container {
   width: 100%;
+  max-width: 1550px;
+  margin: auto;
 }
 
 .success-stories .section-header {
@@ -951,6 +953,7 @@
 
 .schedule-consultation .image img {
   width: 100%;
+  border-radius: 20px 0px 0px 20px;
 }
 
 .schedule-consultation .text {
@@ -1378,6 +1381,10 @@
 
   .schedule-consultation form {
     margin-bottom: 12px;
+  }
+
+  .schedule-consultation .image img {
+    border-radius: 0px 0px 16px 16px;
   }
 
   /*===================================
