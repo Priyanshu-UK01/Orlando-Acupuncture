@@ -921,6 +921,7 @@
 
 .our-story .image img {
   width: 100%;
+  border-radius: 20px;
 }
 
 /*====================================
@@ -1336,6 +1337,10 @@
 
   .our-story .image {
     width: 100%;
+  }
+
+  .our-story .image img {
+    border-radius: 16px;
   }
 
   /*=================================
